@@ -5,7 +5,7 @@ const path = 'http://e-comm-2-env-env.eba-jm8iphts.eu-central-1.elasticbeanstalk
 export const getProducts = () => {
     const [apiData, setApiData] = useState([]);
     useEffect(() => {
-        fetch(new URL(`${path}/getProducts`), { referrerPolicy: "unsafe-url" })
+        fetch(new URL(`${path}/getProducts`))
           .then((res) => {return res.json();})
           .then((data) => {setApiData(data);});
         }, []);
